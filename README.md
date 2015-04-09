@@ -17,7 +17,7 @@ This script updates travis default GCC version. Parameters:
 
     $ ./travis/cpp/clang_update.sh --version 3.4
 
-This script updates travis default GCC version. Parameters:
+This script updates travis default Clang version. Parameters:
 
  - `-v/--version`: Clang version, dot syntax.
  - `-r/--repository`: Ubuntu repository to get Clang update from.
