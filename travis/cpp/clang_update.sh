@@ -45,13 +45,13 @@ sudo add-apt-repository -y ppa:${REPOSITORY}
 sudo apt-get update -qq
 sudo apt-get install --allow-unauthenticated -qq clang-${CLANG_VERSION}
 
-if [ ! -z "$BUILD_LIBCPP}" ]; then
+if [ ! -z "${BUILD_LIBCPP}" ]; then
 	cwd=$(pwd)
 	export CXXFLAGS="-std=c++0x -stdlib=libc++"
 	svn co --quiet "${LIBCPP_UPSTREAM}" libcxx
 	cd libcxx/lib && bash buildit
 	sudo cp ./libc++.so.1.0 /usr/lib/
-	sudo mkdir -f /usr/include/c++/v1
+	sudo mkdir -p /usr/include/c++/v1
 	cd .. && sudo cp -r include/* /usr/include/c++/v1/
 	cd /usr/lib && sudo ln -sf libc++.so.1.0 libc++.so
 	sudo ln -sf libc++.so.1.0 libc++.so.1 && cd $cwd
