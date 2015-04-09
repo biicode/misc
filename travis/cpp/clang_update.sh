@@ -45,7 +45,7 @@ sudo add-apt-repository -y ppa:${REPOSITORY}
 sudo apt-get update -qq
 sudo apt-get install --allow-unauthenticated -qq clang-${CLANG_VERSION}
 
-if [ ! -z "$BUILD_LIBCPP}" ] then
+if [ ! -z "$BUILD_LIBCPP}" ]; then
 	cwd=$(pwd)
 	export CXXFLAGS="-std=c++0x -stdlib=libc++"
 	svn co --quiet "${LIBCPP_UPSTREAM}" libcxx
