@@ -1,7 +1,7 @@
 # misc
 Miscellaneous scripts, utilities, etc. Fresh nectar is welcome
 
-Travis CI tools
+Travis CI tools [![Build Status](https://travis-ci.org/biicode/misc.svg?branch=master)](https://travis-ci.org/biicode/misc)
 ---------------
 
 ### Clang/GCC updaters:
