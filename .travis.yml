@@ -1,5 +1,5 @@
 script:
-  ./gcc_update --version 4.9
+  ./gcc_update.sh --version 4.9
   ./clang_update.sh --version 3.4
   ./clang_update.sh --version 3.5
   ./clang_update.sh --version 3.4 --libc++
