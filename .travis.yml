@@ -1,5 +1,5 @@
 sudo: required
 script:
-  - ./travis/cpp/gcc_update.sh --version 4.9
-  - ./travis/cpp/clang_update.sh --version 3.4
-  - ./travis/cpp/clang_update.sh --version 3.4 --libc++
+  - ./travis/cpp/gcc_update.sh --version 4.9            && ("$(g++ --version)" == *"4.9"*)
+  - ./travis/cpp/clang_update.sh --version 3.4          && ("$(clang++ --version)" == *"3.4"*)
+  - ./travis/cpp/clang_update.sh --version 3.4 --libc++ && ("$(clang++ --version)" == *"3.4"*)
