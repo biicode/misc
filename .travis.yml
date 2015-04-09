@@ -2,6 +2,4 @@ sudo: required
 script:
   ./travis/cpp/gcc_update.sh --version 4.9
   ./travis/cpp/clang_update.sh --version 3.4
-  ./travis/cpp/clang_update.sh --version 3.5
   ./travis/cpp/clang_update.sh --version 3.4 --libc++
-  ./travis/cpp/clang_update.sh --version 3.5 --libc++

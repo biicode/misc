@@ -28,7 +28,7 @@ shift
 done
 
 if [ -z "${CLANG_VERSION}" ]; then
-	CLANG_VERSION="3.5"
+	CLANG_VERSION="3.4"
 fi
 
 if [ -z "${REPOSITORY}" ]; then
@@ -38,6 +38,8 @@ fi
 if [ -z "${LIBCPP_UPSTREAM}" ]; then
 	LIBCPP_UPSTREAM="http://llvm.org/svn/llvm-project/libcxx/trunk"
 fi
+
+set -e
 
 sudo add-apt-repository -y ppa:${REPOSITORY}
 sudo apt-get update -qq
@@ -57,3 +59,5 @@ fi
 
 sudo ln -s -v -f $(which clang++-${CLANG_VERSION}) /usr/bin/clang++
 sudo ln -s -v -f $(which clang-${CLANG_VERSION}) /usr/bin/clangcc
+
+set +e

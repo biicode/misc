@@ -27,6 +27,8 @@ if [ -z "${REPOSITORY}" ]; then
 	REPOSITORY="ubuntu-toolchain-r/test"
 fi
 
+set -e
+
 sudo add-apt-repository -y ppa:${REPOSITORY}
 sudo apt-get update -qq
 
@@ -34,3 +36,5 @@ sudo apt-get install -qq g++-${GCC_VERSION}
 sudo apt-get install -qq gcc-${GCC_VERSION}
 sudo ln -s -v -f $(which g++-${GCC_VERSION}) /usr/bin/g++
 sudo ln -s -v -f $(which gcc-${GCC_VERSION}) /usr/bin/gcc
+
+set +e
