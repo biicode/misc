@@ -13,7 +13,7 @@ case $key in
 	shift
     ;;
     --libc++)
-	BUILD_LIBCPP=true
+	BUILD_LIBCPP="Yeah, build libc++!!!"
 	shift
 	;;
 	--libcpp-upstream)
